@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Chrome extension to manage links with tags",
   "scripts": {
-    "test": "echo \"No tests specified\""
+    "test": "echo \"No tests specified\"",
+    "pack": "mkdir -p dist && zip -r dist/tag-manager.zip manifest.json background.js popup.html popup.js popup.css"
   }
 }

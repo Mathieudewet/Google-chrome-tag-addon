@@ -23,6 +23,24 @@ pour ajouter et lister des liens.
 - `background.js` : service worker initial.
 - Aucune icône n'est fournie afin d'éviter les fichiers binaires.
 
+## Tester l'extension en local
+
+1. Téléchargez ou clonez ce dépôt.
+2. Ouvrez `chrome://extensions` dans Google Chrome.
+3. Activez le **mode développeur**.
+4. Cliquez sur **Charger l'extension non empaquetée** et sélectionnez ce dossier.
+5. L'extension est maintenant prête dans la barre d'outils.
+
+### Générer un package ZIP
+
+Pour partager l'extension ou la préparer à la publication :
+
+```bash
+npm run pack
+```
+
+Le fichier `dist/tag-manager.zip` est créé et peut être installé manuellement ou envoyé sur le Chrome Web Store.
+
 ## Plan du projet
 
 - [ ] Définir la structure des données (lien, tags, relations).
