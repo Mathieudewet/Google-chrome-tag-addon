@@ -1,0 +1,8 @@
+{
+  "name": "google-chrome-tag-addon",
+  "version": "0.1.0",
+  "description": "Chrome extension to manage links with tags",
+  "scripts": {
+    "test": "echo \"No tests specified\""
+  }
+}

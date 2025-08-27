@@ -1,6 +1,6 @@
 # Gestionnaire de Tags pour Liens
 
-Ce projet a pour but de développer un **gestionnaire de tags spécialisé pour les liens (URLs)**.  
+Ce projet a pour but de développer un **gestionnaire de tags spécialisé pour les liens (URLs)**.
 Il permettra d’organiser, classer et retrouver facilement ses liens grâce à des mots-clés.
 
 ## Objectifs
@@ -8,22 +8,20 @@ Il permettra d’organiser, classer et retrouver facilement ses liens grâce à 
 - Sauvegarder des liens avec leurs titres et descriptions.
 - Associer un ou plusieurs tags à chaque lien.
 - Rechercher des liens par tag ou combinaison de tags.
-- Fournir une première interface simple (CLI).
+- Fournir une interface simple pour manipuler les données.
 
-## Fonctionnalités prévues
+## Squelette d'extension Chrome (Manifest V3)
 
-1. **Ajout de liens**
-   - Sauvegarder une URL avec un ou plusieurs tags associés.
-   - Optionnel : ajouter un titre et une description.
-2. **Gestion des tags**
-   - Créer, modifier et supprimer des tags.
-   - Gérer la relation *lien ↔ tags*.
-3. **Recherche**
-   - Lister les liens associés à un tag donné.
-   - Rechercher avec plusieurs tags (ET/OU).
-4. **Persistance**
-   - Stockage des données en local (JSON ou SQLite).
-   - Prévoir la possibilité d’évoluer vers une base de données plus robuste.
+Le dépôt contient désormais un premier **squelette d'extension Google Chrome** basé sur la dernière spécification Manifest V3.
+Cette extension utilise `chrome.storage.sync` pour stocker les liens et leurs tags et propose une popup
+pour ajouter et lister des liens.
+
+### Fichiers principaux
+
+- `manifest.json` : déclaration de l'extension.
+- `popup.html`, `popup.js`, `popup.css` : interface utilisateur minimale.
+- `background.js` : service worker initial.
+- Aucune icône n'est fournie afin d'éviter les fichiers binaires.
 
 ## Plan du projet
 
@@ -35,7 +33,7 @@ Il permettra d’organiser, classer et retrouver facilement ses liens grâce à 
 
 ## Contribution
 
-Toute suggestion ou contribution est la bienvenue.  
+Toute suggestion ou contribution est la bienvenue.
 Ce projet est avant tout un bac à sable pour apprendre et construire un outil utile.
 
 ## Licence
